@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Details - FIS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <h1>FIS</h1>
+                <span>Futuristic Investment Suggester</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Back to Dashboard</a></li>
+                <li><a href="#market-overview">Market Overview</a></li>
+                <li><a href="#trading-strategies">Trading Strategies</a></li>
+                <li><a href="#top-stocks">Top Stocks</a></li>
+                <li><a href="#technical-analysis">Technical Analysis</a></li>
+                <li><a href="top-brokers.html"><i class="fas fa-user-tie"></i> Top Brokers</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <section id="market-overview" class="section">
+                <div class="section-header">
+                    <h2>Market Overview</h2>
+                    <div class="market-status">
+                        <span class="status-indicator open"></span>
+                        <span>Market Open</span>
+                    </div>
+                </div>
+
+                <div class="stock-details-grid">
+                    <div class="stock-price-card">
+                        <h3>NIFTY 50</h3>
+                        <div class="price-info">
+                            <span class="current-price">₹19,425.35</span>
+                            <span class="price-change positive">+1.2%</span>
+                        </div>
+                        <div class="price-chart">
+                            <canvas id="nifty-chart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="stock-price-card">
+                        <h3>SENSEX</h3>
+                        <div class="price-info">
+                            <span class="current-price">₹64,718.56</span>
+                            <span class="price-change positive">+0.8%</span>
+                        </div>
+                        <div class="price-chart">
+                            <canvas id="sensex-chart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="market-metrics-card">
+                        <h3>Market Metrics</h3>
+                        <div class="metrics-grid">
+                            <div class="metric-item">
+                                <span class="metric-label">Market Cap</span>
+                                <span class="metric-value">₹2.5T</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">24h Volume</span>
+                                <span class="metric-value">₹45.2B</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">Volatility Index</span>
+                                <span class="metric-value">15.2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="trading-strategies" class="section">
+                <h2>Trading Strategies</h2>
+                <div class="strategies-grid">
+                    <div class="strategy-card">
+                        <h3>Day Trading</h3>
+                        <p>Short-term trading strategy focusing on intraday price movements</p>
+                        <ul class="strategy-points">
+                            <li>Quick entry and exit</li>
+                            <li>Technical analysis based</li>
+                            <li>Risk management crucial</li>
+                        </ul>
+                    </div>
+                    <div class="strategy-card">
+                        <h3>Swing Trading</h3>
+                        <p>Medium-term strategy capturing price swings over days to weeks</p>
+                        <ul class="strategy-points">
+                            <li>Trend following</li>
+                            <li>Multiple timeframe analysis</li>
+                            <li>Position sizing important</li>
+                        </ul>
+                    </div>
+                    <div class="strategy-card">
+                        <h3>Value Investing</h3>
+                        <p>Long-term strategy based on fundamental analysis</p>
+                        <ul class="strategy-points">
+                            <li>Company fundamentals</li>
+                            <li>Market valuation</li>
+                            <li>Patience required</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="top-stocks" class="section">
+                <h2>Top Performing Stocks</h2>
+                <div class="stock-list">
+                    <div class="stock-item">
+                        <div class="stock-info">
+                            <span class="stock-name">RELIANCE</span>
+                            <span class="stock-sector">Energy</span>
+                        </div>
+                        <div class="stock-price-info">
+                            <span class="stock-price">₹2,450.75</span>
+                            <span class="stock-change positive">+2.5%</span>
+                        </div>
+                    </div>
+                    <div class="stock-item">
+                        <div class="stock-info">
+                            <span class="stock-name">TCS</span>
+                            <span class="stock-sector">IT</span>
+                        </div>
+                        <div class="stock-price-info">
+                            <span class="stock-price">₹3,567.80</span>
+                            <span class="stock-change positive">+1.8%</span>
+                        </div>
+                    </div>
+                    <div class="stock-item">
+                        <div class="stock-info">
+                            <span class="stock-name">HDFCBANK</span>
+                            <span class="stock-sector">Banking</span>
+                        </div>
+                        <div class="stock-price-info">
+                            <span class="stock-price">₹1,678.45</span>
+                            <span class="stock-change negative">-0.5%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="technical-analysis" class="section">
+                <h2>Technical Analysis</h2>
+                <div class="technical-grid">
+                    <div class="technical-card">
+                        <h3>Moving Averages</h3>
+                        <div class="indicator-list">
+                            <div class="indicator-item">
+                                <span class="indicator-name">SMA 20</span>
+                                <span class="indicator-value">₹19,350.25</span>
+                            </div>
+                            <div class="indicator-item">
+                                <span class="indicator-name">EMA 50</span>
+                                <span class="indicator-value">₹19,280.75</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="technical-card">
+                        <h3>RSI</h3>
+                        <div class="rsi-value">65.8</div>
+                        <div class="rsi-label">Neutral</div>
+                    </div>
+                    <div class="technical-card">
+                        <h3>MACD</h3>
+                        <div class="macd-chart">
+                            <canvas id="macd-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="stock-details.js"></script>
+</body>
+</html> 

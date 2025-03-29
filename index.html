@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Investment Suggester</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <button class="menu-toggle" aria-label="Toggle Menu">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <h1>FIS</h1>
+                <span>Futuristic Investment Suggester</span>
+            </div>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search investments...">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#dashboard"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                <li><a href="#market-analysis"><i class="fas fa-chart-bar"></i> Market Analysis</a></li>
+                <li><a href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                <li><a href="#ai-insights"><i class="fas fa-robot"></i> AI Insights</a></li>
+                <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+            
+            <div class="market-overview-panel">
+                <h3>Market Overview</h3>
+                <div class="market-item">
+                    <div class="market-label">NIFTY 50</div>
+                    <div class="market-value">19,425.35</div>
+                    <div class="market-change positive">+1.2%</div>
+                </div>
+                <div class="market-item">
+                    <div class="market-label">SENSEX</div>
+                    <div class="market-value">64,718.56</div>
+                    <div class="market-change positive">+0.8%</div>
+                </div>
+                <div class="market-item">
+                    <div class="market-label">Gold</div>
+                    <div class="market-value">₹5,234.75</div>
+                    <div class="market-change negative">-0.3%</div>
+                </div>
+            </div>
+
+            <div class="quick-stats-panel">
+                <h3>Quick Stats</h3>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Total Investments</h3>
+                        <p>₹2.5 Cr</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Success Rate</h3>
+                        <p>87.5%</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-arrow-trend-up"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Market Growth</h3>
+                        <p>+12.3%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="notifications-panel">
+                <h3>Market Alerts</h3>
+                <div class="notification-list">
+                    <div class="notification-item">
+                        <div class="notification-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <div class="notification-content">
+                            <p>NIFTY 50 reached new high</p>
+                            <span class="notification-time">2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="notification-item">
+                        <div class="notification-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="notification-content">
+                            <p>Market trend analysis updated</p>
+                            <span class="notification-time">4 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="notification-item">
+                        <div class="notification-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <div class="notification-content">
+                            <p>New investment opportunity available</p>
+                            <span class="notification-time">6 hours ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav> 
+
+        <main class="main-content">
+            <section id="dashboard" class="hero-section">
+                <div class="hero-content">
+                    <h1>Smart Investment Solutions</h1>
+                    <p>Make data-driven investment decisions with AI-powered insights</p>
+                </div>
+            </section>
+
+            <section id="market-analysis" class="calculator-section">
+                <h2>Investment Calculator</h2>
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <label for="investment-amount">Investment Amount</label>
+                        <input type="number" id="investment-amount" placeholder="Enter amount">
+                    </div>
+                    <button id="calculate-btn">Calculate Returns</button>
+                </div>
+            </section>
+
+            <section id="portfolio" class="investment-cards">
+                <div class="card stock-card" data-investment-type="stock">
+                    <div class="card-header">
+                        <h3>Stock Market</h3>
+                        <div class="card-actions">
+                            <button class="action-btn info-btn"><i class="fas fa-info-circle"></i></button>
+                            <button class="action-btn chart-btn"><i class="fas fa-chart-line"></i></button>
+                        </div>
+                    </div>
+                    <div class="risk-level high">High Risk</div>
+                    <div class="returns">Expected Returns: <span id="stock-returns">₹0</span></div>
+                    <div class="duration">Recommended Duration: <span id="stock-duration">6 Months</span></div>
+                    <div class="card-details">
+                        <div class="market-trend">
+                            <span>Market Trend</span>
+                            <span class="trend-value positive">Bullish</span>
+                        </div>
+                        <div class="volatility">
+                            <span>Volatility</span>
+                            <div class="volatility-bar">
+                                <div class="volatility-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="buy-btn">View Details</button>
+                </div>
+
+                <div class="card gold-card" data-investment-type="gold">
+                    <div class="card-header">
+                        <h3>Gold Investment</h3>
+                        <div class="card-actions">
+                            <button class="action-btn info-btn"><i class="fas fa-info-circle"></i></button>
+                            <button class="action-btn chart-btn"><i class="fas fa-chart-line"></i></button>
+                        </div>
+                    </div>
+                    <div class="risk-level medium">Medium Risk</div>
+                    <div class="returns">Expected Returns: <span id="gold-returns">₹0</span></div>
+                    <div class="duration">Recommended Duration: <span id="gold-duration">1 year</span></div>
+                    <div class="card-details">
+                        <div class="market-trend">
+                            <span>Market Trend</span>
+                            <span class="trend-value neutral">Stable</span>
+                        </div>
+                        <div class="volatility">
+                            <span>Volatility</span>
+                            <div class="volatility-bar">
+                                <div class="volatility-fill" style="width: 45%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="buy-btn">View Details</button>
+                </div>
+
+                <div class="card real-estate-card" data-investment-type="real-estate">
+                    <div class="card-header">
+                        <h3>Real Estate</h3>
+                        <div class="card-actions">
+                            <button class="action-btn info-btn"><i class="fas fa-info-circle"></i></button>
+                            <button class="action-btn chart-btn"><i class="fas fa-chart-line"></i></button>
+                        </div>
+                    </div>
+                    <div class="risk-level low">Low Risk</div>
+                    <div class="returns">Expected Returns: <span id="real-estate-returns">₹0</span></div>
+                    <div class="duration">Recommended Duration: <span id="real-estate-duration">5 years</span></div>
+                    <div class="card-details">
+                        <div class="market-trend">
+                            <span>Market Trend</span>
+                            <span class="trend-value positive">Growing</span>
+                        </div>
+                        <div class="volatility">
+                            <span>Volatility</span>
+                            <div class="volatility-bar">
+                                <div class="volatility-fill" style="width: 25%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="buy-btn">View Details</button>
+                </div>
+            </section>
+
+            <section id="ai-insights" class="ai-insights-panel">
+                <div class="ai-header">
+                    <div class="ai-avatar">
+                        <div class="ai-pulse"></div>
+                    </div>
+                    <h3>AI Investment Insights</h3>
+                </div>
+                <div class="ai-content">
+                    <p class="ai-message" id="ai-message">Analyzing market conditions and generating personalized recommendations...</p>
+                    <div class="ai-recommendations">
+                        <h4>Personalized Recommendations</h4>
+                        <ul id="ai-recommendations-list">
+                            <!-- AI recommendations will be populated here -->
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="settings" class="charts-section">
+                <h2>Investment Growth Projection</h2>
+                <div class="chart-container">
+                    <canvas id="investment-growth-chart"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Investment Analysis - InvestSmart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>InvestSmart</h1>
+                <span>Your AI Investment Guide</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="stock-details.html"><i class="fas fa-chart-line"></i> Stock Analysis</a></li>
+                    <li><a href="gold-details.html"><i class="fas fa-coins"></i> Gold Investment</a></li>
+                    <li><a href="real-estate-details.html" class="active"><i class="fas fa-building"></i> Real Estate</a></li>
+                  
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <h2>Real Estate Investment Analysis</h2>
+                <p>Comprehensive analysis of real estate market trends and investment opportunities</p>
+            </header>
+
+            <!-- Market Overview Section -->
+            <section class="section">
+                <div class="section-header">
+                    <h3>Market Overview</h3>
+                    <div class="market-status">
+                        <span class="status-indicator open"></span>
+                        <span>Market Open</span>
+                    </div>
+                </div>
+                <div class="market-overview">
+                    <div class="market-item">
+                        <span class="market-label">Average Property Price</span>
+                        <span class="market-value">₹2.5Cr</span>
+                        <span class="market-change positive">+5.2%</span>
+                    </div>
+                    <div class="market-item">
+                        <span class="market-label">Rental Yield</span>
+                        <span class="market-value">3.8%</span>
+                        <span class="market-change positive">+0.3%</span>
+                    </div>
+                    <div class="market-item">
+                        <span class="market-label">Market Volume</span>
+                        <span class="market-value">1,234</span>
+                        <span class="market-change negative">-2.1%</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Properties Section -->
+            <section class="section property-listings">
+                <h3>Featured Properties in Kerala</h3>
+                <div class="property-grid">
+                    <!-- Property Card 1 -->
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src=https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80 alt="Luxury Villa">
+                        </div>
+                        <div class="property-details">
+                            <h4 class="property-title">Luxury Villa in Kochi</h4>
+                            <div class="property-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Kochi, Kerala</span>
+                            </div>
+                            <div class="property-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-bed"></i>
+                                    <span>4 Beds</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-bath"></i>
+                                    <span>3 Baths</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-ruler-combined"></i>
+                                    <span>3,500 sqft</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-car"></i>
+                                    <span>2 Parking</span>
+                                </div>
+                            </div>
+                            <div class="property-price">₹4.5Cr</div>
+                            <p class="property-description">Beautiful luxury villa with modern amenities, swimming pool, and landscaped garden. Perfect for families looking for premium living.</p>
+                            <div class="property-actions">
+                                <button class="contact-btn">
+                                    <i class="fas fa-phone"></i>
+                                    Contact Agent
+                                </button>
+                                <button class="view-details-btn">
+                                    <i class="fas fa-info-circle"></i>
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Property Card 2 -->
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Modern Apartment">
+                        </div>
+                        <div class="property-details">
+                            <h4 class="property-title">Modern Apartment in Trivandrum</h4>
+                            <div class="property-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Trivandrum, Kerala</span>
+                            </div>
+                            <div class="property-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-bed"></i>
+                                    <span>2 Beds</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-bath"></i>
+                                    <span>2 Baths</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-ruler-combined"></i>
+                                    <span>1,200 sqft</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-car"></i>
+                                    <span>1 Parking</span>
+                                </div>
+                            </div>
+                            <div class="property-price">₹1.2Cr</div>
+                            <p class="property-description">Contemporary apartment with smart home features, gym access, and 24/7 security. Ideal for young professionals.</p>
+                            <div class="property-actions">
+                                <button class="contact-btn">
+                                    <i class="fas fa-phone"></i>
+                                    Contact Agent
+                                </button>
+                                <button class="view-details-btn">
+                                    <i class="fas fa-info-circle"></i>
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Property Card 3 -->
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Beachfront Villa">
+                        </div>
+                        <div class="property-details">
+                            <h4 class="property-title">Beachfront Villa in Kovalam</h4>
+                            <div class="property-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Kovalam, Kerala</span>
+                            </div>
+                            <div class="property-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-bed"></i>
+                                    <span>3 Beds</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-bath"></i>
+                                    <span>2 Baths</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-ruler-combined"></i>
+                                    <span>2,500 sqft</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-umbrella-beach"></i>
+                                    <span>Beach Access</span>
+                                </div>
+                            </div>
+                            <div class="property-price">₹3.8Cr</div>
+                            <p class="property-description">Stunning beachfront villa with private beach access, infinity pool, and panoramic ocean views. Perfect for luxury living.</p>
+                            <div class="property-actions">
+                                <button class="contact-btn">
+                                    <i class="fas fa-phone"></i>
+                                    Contact Agent
+                                </button>
+                                <button class="view-details-btn">
+                                    <i class="fas fa-info-circle"></i>
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+            </section>
+
+            <!-- Investment Options Section -->
+            <section class="section">
+                <h3>Investment Options</h3>
+                <div class="investment-options">
+                    <div class="option-card">
+                        <h4>Residential Properties</h4>
+                        <ul>
+                            <li>Apartments</li>
+                            <li>Villas</li>
+                            <li>Plots</li>
+                        </ul>
+                        <button class="view-details-btn">Explore</button>
+                    </div>
+                    <div class="option-card">
+                        <h4>Commercial Properties</h4>
+                        <ul>
+                            <li>Office Spaces</li>
+                            <li>Retail Shops</li>
+                            <li>Warehouses</li>
+                        </ul>
+                        <button class="view-details-btn">Explore</button>
+                    </div>
+                    <div class="option-card">
+                        <h4>Land Development</h4>
+                        <ul>
+                            <li>Agricultural Land</li>
+                            <li>Industrial Plots</li>
+                            <li>Mixed-Use Development</li>
+                        </ul>
+                        <button class="view-details-btn">Explore</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="real-estate-details.js"></script>
+</body>
+</html> 

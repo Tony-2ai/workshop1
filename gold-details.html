@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Investment Details - FIS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <h1>FIS</h1>
+                <span>Futuristic Investment Suggester</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-arrow-left"></i> Back to Dashboard</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <section class="gold-details-section">
+                <div class="gold-header">
+                    <h1>Gold Investment Analysis</h1>
+                    <div class="gold-price">
+                        <span class="current-price">₹5,234.75</span>
+                        <span class="price-change positive">+0.8%</span>
+                    </div>
+                </div>
+
+                <div class="gold-grid">
+                    <div class="gold-chart-card">
+                        <h2>Price History</h2>
+                        <div class="chart-container">
+                            <canvas id="gold-price-chart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="gold-analysis-card">
+                        <h2>Market Analysis</h2>
+                        <div class="analysis-content">
+                            <div class="analysis-item">
+                                <h3>Market Sentiment</h3>
+                                <span class="sentiment-indicator positive">Bullish</span>
+                            </div>
+                            <div class="analysis-item">
+                                <h3>Demand Trend</h3>
+                                <div class="volume-bar">
+                                    <div class="volume-fill" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="analysis-item">
+                                <h3>Volatility</h3>
+                                <span class="volatility-indicator medium">Medium</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gold-options-card">
+                        <h2>Investment Options</h2>
+                        <div class="investment-options">
+                            <div class="option-item">
+                                <h3>Physical Gold</h3>
+                                <p>Traditional gold bars and coins</p>
+                                <ul>
+                                    <li>Direct ownership</li>
+                                    <li>Storage costs</li>
+                                    <li>Higher security</li>
+                                </ul>
+                            </div>
+                            <div class="option-item">
+                                <h3>Gold ETFs</h3>
+                                <p>Exchange-traded funds</p>
+                                <ul>
+                                    <li>Liquidity</li>
+                                    <li>Lower costs</li>
+                                    <li>Easy trading</li>
+                                </ul>
+                            </div>
+                            <div class="option-item">
+                                <h3>Digital Gold</h3>
+                                <p>Digital gold investment</p>
+                                <ul>
+                                    <li>Fractional investment</li>
+                                    <li>Digital storage</li>
+                                    <li>Easy redemption</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gold-news-card">
+                        <h2>Market News</h2>
+                        <div class="news-list">
+                            <div class="news-item">
+                                <span class="news-date">2 hours ago</span>
+                                <p>Global gold demand increases by 15%</p>
+                            </div>
+                            <div class="news-item">
+                                <span class="news-date">4 hours ago</span>
+                                <p>Central banks continue gold accumulation</p>
+                            </div>
+                            <div class="news-item">
+                                <span class="news-date">6 hours ago</span>
+                                <p>Gold mining production forecast updated</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="gold-details.js"></script>
+</body>
+</html> 
